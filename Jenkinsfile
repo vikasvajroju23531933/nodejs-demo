@@ -12,7 +12,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t vajroju/nodeapp:$BUILD_NUMBER .'
+                sh 'docker build -t vikasvajroju23531933:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push vajroju/nodeapp:$BUILD_NUMBER'
+                sh 'docker push vikasvajroju23531933:$BUILD_NUMBER'
             }
         }
 }
